@@ -1,0 +1,17 @@
+pipeline
+  agent any
+
+  stages {
+
+    stage('prepare Artifact'){
+       steps {
+         sh '''
+           cd static
+           zip ../frontend.zip *
+         '''
+      }
+    }
+
+  }
+
+}
